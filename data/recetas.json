@@ -17,7 +17,7 @@
         "id": 3,
         "nombre": "Ajiaco Santafereño",
         "descripcion": "Sopa típica de Bogotá con tres tipos de papa y guascas.",
-        "imagen": "assets/img/ajiaco.jpg",
+        "imagen": "assets/img/ajiaco.jpeg",
         "categoria": "Sopas"
     }
 ]
