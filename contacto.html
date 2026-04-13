@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores de Colombia | Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/icons/logo.png" alt="Logo">
+                <h1>Sabores de Colombia</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicios.html">Recetas</a></li>
+                <li><a href="detalle.html">Explorar</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="#" id="btn-favoritos">Mis Favoritos <span id="fav-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto-container">
+        <section class="contacto-info">
+            <h2>¡Queremos escucharte!</h2>
+            <p>¿Tienes una receta familiar que quieras compartir o alguna duda sobre nuestros servicios? Escríbenos.</p>
+            <br>
+            <br>
+            <div class="info-items">
+                <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+                <p><i class="fas fa-envelope"></i> info@saboresdecolombia.com</p>
+            </div>
+        </section>
+
+        <section class="contacto-form">
+            <form id="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto">
+                        <option value="consulta">Hacer una consulta</option>
+                        <option value="receta">Compartir una receta</option>
+                        <option value="soporte">Soporte técnico</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                <p id="mensaje-estado"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/contacto.js"></script>
+</body>
+</html>
