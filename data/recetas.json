@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Natilla Colombiana",
+        "descripcion": "Postre tradicional navideño a base de maíz y panela.",
+        "imagen": "assets/img/natilla.jpg",
+        "categoria": "Postres"
+    },
+    {
+        "id": 2,
+        "nombre": "Bandeja Paisa",
+        "descripcion": "El plato más representativo con frijoles, arroz y carne.",
+        "imagen": "assets/img/bandeja.jpg",
+        "categoria": "Plato Fuerte"
+    },
+    {
+        "id": 3,
+        "nombre": "Ajiaco Santafereño",
+        "descripcion": "Sopa típica de Bogotá con tres tipos de papa y guascas.",
+        "imagen": "assets/img/ajiaco.jpg",
+        "categoria": "Sopas"
+    }
+]
