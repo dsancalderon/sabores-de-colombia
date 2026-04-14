@@ -19,18 +19,19 @@ async function cargarRecetas() {
         recetasAMostrar.forEach(receta => {
             const card = document.createElement('div');
             card.className = 'card';
-            card.innerHTML = `
-                <img src="${receta.imagen}" alt="${receta.nombre}">
-                <div class="card-body">
-                    <small>${receta.categoria}</small>
-                    <h4>${receta.nombre}</h4>
-                    <p>${receta.descripcion}</p>
-                    <div class="card-footer">
-                        <a href="detalle.html?id=${receta.id}" class="btn-primary">Ver Detalles</a>
-                        <button class="fav-btn" onclick="toggleFavorito(${receta.id})">❤️</button>
-                    </div>
-                </div>
-            `;
+            // ... dentro de tu loop de recetas.forEach ...
+        card.innerHTML = `
+            <img src="${receta.imagen}" alt="${receta.nombre}">
+            <div class="card-body">
+                <small>${receta.categoria}</small>
+                <h4>${receta.nombre}</h4>
+                <p>${receta.descripcion}</p>
+            <div class="card-footer">
+                <a href="detalle.html?id=${receta.id}" class="btn-primary">Ver Detalles</a>
+                <button class="fav-btn" data-id="${receta.id}" onclick="toggleFavorito(${receta.id})">🤍</button>
+            </div>
+        </div>
+        `;
             contenedor.appendChild(card);
         });
     } catch (error) {
