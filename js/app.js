@@ -1,35 +1,41 @@
-// Función para cargar y mostrar las recetas en el Home
-async function cargarRecetasDestacadas() {
-    const contenedor = document.getElementById('contenedor-destacados');
+async function cargarRecetas() {
+    // Intentamos buscar el contenedor del Home O el de la página de servicios
+    const contenedorHome = document.getElementById('contenedor-destacados');
+    const contenedorServicios = document.getElementById('contenedor-recetas');
     
+    // Si no hay ninguno de los dos, no hacemos nada
+    if (!contenedorHome && !contenedorServicios) return;
+
     try {
         const respuesta = await fetch('data/recetas.json');
         const datos = await respuesta.json();
         
-        // Limpiamos el contenedor (quitamos el "Cargando...")
+        // Decidimos qué contenedor usar y cuántos datos mostrar
+        const contenedor = contenedorHome || contenedorServicios;
+        const recetasAMostrar = contenedorHome ? datos.slice(0, 3) : datos;
+
         contenedor.innerHTML = '';
 
-        // Solo mostraremos las primeras 3 en el Home como "Destacadas"
-        datos.slice(0, 3).forEach(receta => {
+        recetasAMostrar.forEach(receta => {
             const card = document.createElement('div');
             card.className = 'card';
-            
             card.innerHTML = `
                 <img src="${receta.imagen}" alt="${receta.nombre}">
                 <div class="card-body">
+                    <small>${receta.categoria}</small>
                     <h4>${receta.nombre}</h4>
                     <p>${receta.descripcion}</p>
-                    <a href="detalle.html?id=${receta.id}" class="btn-primary">Ver Receta</a>
-                    <button onclick="guardarFavorito(${receta.id})" class="btn-secundary">❤️</button>
+                    <div class="card-footer">
+                        <a href="detalle.html?id=${receta.id}" class="btn-primary">Ver Detalles</a>
+                        <button class="fav-btn" onclick="toggleFavorito(${receta.id})">❤️</button>
+                    </div>
                 </div>
             `;
             contenedor.appendChild(card);
         });
     } catch (error) {
-        console.error("Error cargando las recetas:", error);
-        contenedor.innerHTML = '<p>Error al cargar los sabores de Colombia.</p>';
+        console.error("Error:", error);
     }
 }
 
-// Ejecutar la función al cargar la página
-document.addEventListener('DOMContentLoaded', cargarRecetasDestacadas);
+document.addEventListener('DOMContentLoaded', cargarRecetas);

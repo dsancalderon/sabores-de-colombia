@@ -19,5 +19,42 @@
         "descripcion": "Sopa típica de Bogotá con tres tipos de papa y guascas.",
         "imagen": "assets/img/ajiaco.jpeg",
         "categoria": "Sopas"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Arepa de Huevo",
+        "descripcion": "Delicia de la Costa Caribe frita con un huevo en su interior.",
+        "imagen": "assets/img/arepa-huevo.jpg",
+        "categoria": "Entradas"
+    },
+    {
+        "id": 5,
+        "nombre": "Lulada Valluna",
+        "descripcion": "Bebida refrescante de Cali con trozos de lulo y limón.",
+        "imagen": "assets/img/lulada.jpg",
+        "categoria": "Bebidas"
+    },
+    {
+        "id": 6,
+        "nombre": "Tamal Tolimense",
+        "descripcion": "Masa de maíz rellena de carnes y verduras envuelta en hoja de bijao.",
+        "imagen": "assets/img/tamal.jpg",
+        "categoria": "Plato Fuerte"
+    },
+    {
+        "id": 7,
+        "nombre": "Lechona Tolimense",
+        "descripcion": "Cerdo relleno de arveja y carne, cocido lentamente al horno.",
+        "imagen": "assets/img/lechona.jpg",
+        "categoria": "Plato Fuerte"
+    },
+    {
+        "id": 8,
+        "nombre": "Arroz con Coco",
+        "descripcion": "Acompañamiento dulce y salado típico de las costas.",
+        "imagen": "assets/img/arroz-coco.jpg",
+        "categoria": "Acompañamientos"
     }
 ]
+
