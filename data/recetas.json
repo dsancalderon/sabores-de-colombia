@@ -25,7 +25,7 @@
         "id": 4,
         "nombre": "Arepa de Huevo",
         "descripcion": "Delicia de la Costa Caribe frita con un huevo en su interior.",
-        "imagen": "assets/img/arepa-huevo.jpg",
+        "imagen": "assets/img/arepa_huevo.webp",
         "categoria": "Entradas"
     },
     {
@@ -39,7 +39,7 @@
         "id": 6,
         "nombre": "Tamal Tolimense",
         "descripcion": "Masa de maíz rellena de carnes y verduras envuelta en hoja de bijao.",
-        "imagen": "assets/img/tamal.jpg",
+        "imagen": "assets/img/tamal.webp",
         "categoria": "Plato Fuerte"
     },
     {
@@ -53,7 +53,7 @@
         "id": 8,
         "nombre": "Arroz con Coco",
         "descripcion": "Acompañamiento dulce y salado típico de las costas.",
-        "imagen": "assets/img/arroz-coco.jpg",
+        "imagen": "assets/img/arroz_coco.jpg",
         "categoria": "Acompañamientos"
     }
 ]
