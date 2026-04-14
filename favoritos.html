@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabores de Colombia | Recetas</title>
-    <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
+    <title>Sabores de Colombia | Mis Favoritos</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,33 +12,34 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/icons/logo.png" alt="Logo">
+                <img src="assets/img/logo.png" alt="Logo">
                 <h1>Sabores de Colombia</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html" class="active">Recetas</a></li>
+                <li><a href="servicios.html">Recetas</a></li>
+                <li><a href="detalle.html">Explorar</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="favoritos.html" id="btn-favoritos">Mis Favoritos <span id="fav-count">0</span></a></li>
+                <li><a href="favoritos.html" class="active" id="btn-favoritos">Mis Favoritos <span id="fav-count">0</span></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="page-header">
-            <br>
-            <h2>Nuestro Catálogo de Sabores</h2>
-            <p>Explora la diversidad gastronómica de las regiones de Colombia.</p>
-            <br>
-            <br>
+            <h2>Mis Recetas Favoritas</h2>
+            <p>Aquí tienes guardados los sabores que más te han gustado.</p>
         </section>
 
         <section class="all-services">
-            <div id="contenedor-recetas" class="services-grid">
-                </div>
+            <div id="contenedor-favoritos-lista" class="services-grid">
+                <p>Aún no tienes recetas favoritas.</p>
+            </div>
         </section>
     </main>
+
     <script src="js/favoritos.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
+
