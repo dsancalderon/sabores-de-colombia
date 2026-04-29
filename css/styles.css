@@ -337,3 +337,81 @@ footer {
     50% { transform: scale(1.4); }
     100% { transform: scale(1.2); }
 }
+
+/* ===== DETALLE RECETA ===== */
+
+.detalle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px;
+}
+
+.detalle-info {
+    flex: 1;
+}
+
+.detalle-info h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.descripcion {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.detalle-extra p {
+    margin: 8px 0;
+}
+
+.detalle-botones {
+    margin-top: 20px;
+}
+
+/* BOTONES GENERALES */
+.btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* BOTÓN IMPRIMIR */
+.btn-print {
+    background: #ff6600;
+    color: white;
+    border: none;
+}
+
+/* BOTÓN COMPARTIR */
+.btn-share {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+/* ICONOS */
+.btn i {
+    margin-right: 8px;
+}
+
+/* IMAGEN */
+.detalle-img {
+    flex: 1;
+}
+
+.detalle-img img {
+    width: 100%;
+    border-radius: 12px;
+}
