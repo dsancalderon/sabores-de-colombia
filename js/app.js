@@ -31,6 +31,17 @@ async function cargarRecetas() {
         contenedor.innerHTML = '';
 
         recetasAMostrar.forEach(receta => {
+
+            // 1. Obtenemos los favoritos actuales del localStorage
+                const favoritosActuales = JSON.parse(localStorage.getItem('misFavoritos')) || [];
+
+            // 2. Verificamos si esta receta específica ya es favorita
+                const esFavorito = favoritosActuales.includes(receta.id);
+
+            // 3. Definimos el icono (corazón rojo si es favorito, gris/vacío si no)
+                const iconoCorazon = esFavorito ? '❤️' : '🤍';
+                const claseActiva = esFavorito ? 'active' : '';
+
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
