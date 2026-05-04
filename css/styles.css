@@ -483,3 +483,51 @@ footer {
     cursor: pointer;
     font-weight: bold;
 }
+
+/* --- ESTILOS DE IMPRESIÓN --- */
+
+/* Ocultar la sección completa en la web */
+.print-only {
+    display: none;
+}
+
+@media print {
+    /* Ocultar todo el diseño de la página web */
+    header, 
+    footer, 
+    nav, 
+    .detalle-container, 
+    .detalle-botones, 
+    #modalCompartir,
+    .btn {
+        display: none !important;
+    }
+
+    /* Mostrar solo la receta estructurada para PDF */
+    .print-only {
+        display: block !important;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .print-header h1 {
+        color: #ff7f50; /* Tu naranja característico */
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    h2 { border-bottom: 2px solid #ff7f50; padding-bottom: 5px; }
+    h3 { margin-top: 20px; color: #e66b3f; }
+    
+    ul, ol { margin-left: 20px; }
+    li { margin-bottom: 8px; }
+
+    .print-footer {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 0.8rem;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+    }
+}

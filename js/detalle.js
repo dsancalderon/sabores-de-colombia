@@ -8,7 +8,6 @@ async function cargarDetalle() {
     try {
         const res = await fetch('data/recetas.json');
         const recetas = await res.json();
-
         const receta = recetas.find(r => r.id === id);
 
         if (!receta) {
@@ -18,42 +17,58 @@ async function cargarDetalle() {
 
         contenedor.innerHTML = `
             <div class="detalle-container">
-                
                 <div class="detalle-info">
                     <span class="badge">${receta.categoria}</span>
                     <h2>${receta.nombre}</h2>
                     <p class="descripcion">${receta.descripcion}</p>
-
-                    <div class="detalle-extra">
-                        <p><strong>⏱ Tiempo:</strong> 10 minutos</p>
-                        <p><strong>🍽 Porciones:</strong> 4 personas</p>
-                    </div>
-
                     <div class="detalle-botones">
                         <button class="btn btn-print">
-                            <i class="fas fa-print"></i> Imprimir
+                            <i class="fas fa-print"></i> Imprimir Receta
                         </button>
-
-                        <button id="btnCompartir" class="btn btn-copy-link">
+                        <button id="btnCompartir" class="btn btn-share">
                             <i class="fas fa-share-alt"></i> Compartir
                         </button>
                     </div>
                 </div>
-
                 <div class="detalle-img">
                     <img src="${receta.imagen}" alt="${receta.nombre}">
                 </div>
+            </div>
 
+            <!-- SECCIÓN OCULTA QUE APARECERÁ EN EL PDF -->
+            <div id="seccion-imprimir" class="print-only">
+                <header class="print-header">
+                    <h1>Sabores de Colombia</h1>
+                    <hr>
+                </header>
+                <h2>${receta.nombre}</h2>
+                <p><em>${receta.descripcion}</em></p>
+                
+                <h3>Ingredientes</h3>
+                <ul>
+                    ${receta.ingredientes.map(ing => `<li>${ing}</li>`).join('')}
+                </ul>
+
+                <h3>Preparación</h3>
+                <ol>
+                    ${receta.pasos.map(paso => `<li>${paso}</li>`).join('')}
+                </ol>
+                <footer class="print-footer">
+                    <p>Encuentra más recetas en: Sabores de Colombia Web</p>
+                </footer>
             </div>
         `;
     } catch (error) {
         console.error("Error cargando detalle:", error);
     }
-
-    // Usamos el 'document' para escuchar los clics en toda la página
-// Esto asegura que detecte el botón incluso si se creó dinámicamente
-
 }
+
+// Escuchador de clics para el botón de imprimir
+document.addEventListener('click', (event) => {
+    if (event.target.closest('.btn-print')) {
+        window.print();
+    }
+});
 
 document.addEventListener('click', (event) => {
     

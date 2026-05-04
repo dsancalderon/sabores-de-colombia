@@ -4,57 +4,120 @@
         "nombre": "Natilla Colombiana",
         "descripcion": "Postre tradicional navideño a base de maíz y panela.",
         "imagen": "assets/img/natilla.jpg",
-        "categoria": "Postres"
+        "categoria": "Postres",
+        "ingredientes": ["1 litro de leche", "200g de fécula de maíz", "250g de panela rallada", "2 astillas de canela", "1 cucharada de mantequilla", "Coco rallado al gusto"],
+        "pasos": [
+            "Disolver la fécula de maíz en una taza de leche fría.",
+            "Poner a hervir el resto de la leche con la panela y la canela.",
+            "Cuando hierva, retirar la canela y agregar la fécula disuelta.",
+            "Revolver constantemente a fuego lento hasta que espese y se vea el fondo de la olla.",
+            "Agregar la mantequilla y el coco, verter en un molde y dejar enfriar."
+        ]
     },
     {
         "id": 2,
         "nombre": "Bandeja Paisa",
         "descripcion": "El plato más representativo con frijoles, arroz y carne.",
         "imagen": "assets/img/bandeja.jpg",
-        "categoria": "Plato Fuerte"
+        "categoria": "Plato Fuerte",
+        "ingredientes": ["500g de frijoles cargamanto", "1 libra de carne molida", "4 chorizos", "500g de chicharrón", "4 huevos", "Arroz blanco, aguacate y arepas"],
+        "pasos": [
+            "Remojar los frijoles desde la noche anterior y cocinarlos hasta que ablanden.",
+            "Preparar un hogao con tomate y cebolla para sazonar los frijoles.",
+            "Fritar el chicharrón hasta que esté crocante.",
+            "Cocinar la carne molida y sofreír los chorizos.",
+            "Preparar arroz blanco y huevos fritos. Servir todo junto con aguacate y tajadas de plátano maduro."
+        ]
     },
     {
         "id": 3,
         "nombre": "Ajiaco Santafereño",
         "descripcion": "Sopa típica de Bogotá con tres tipos de papa y guascas.",
         "imagen": "assets/img/ajiaco.jpeg",
-        "categoria": "Sopas"
+        "categoria": "Sopas",
+        "ingredientes": ["Pechuga de pollo", "Papa criolla, pastusa y sabanera", "Mazorcas", "Guascas", "Alcaparras y crema de leche"],
+        "pasos": [
+            "Cocinar el pollo con las mazorcas y la papa sabanera.",
+            "Cuando la papa sabanera esté blanda, agregar la papa pastusa y luego la criolla.",
+            "Retirar el pollo, desmecharlo y reservar.",
+            "Dejar cocinar hasta que la papa criolla se deshaga y espese la sopa.",
+            "Agregar las guascas al final. Servir con el pollo desmechado, crema de leche y alcaparras."
+        ]
     },
-
     {
         "id": 4,
         "nombre": "Arepa de Huevo",
         "descripcion": "Delicia de la Costa Caribe frita con un huevo en su interior.",
         "imagen": "assets/img/arepa_huevo.webp",
-        "categoria": "Entradas"
+        "categoria": "Entradas",
+        "ingredientes": ["2 tazas de harina de maíz amarillo", "Agua y sal", "4 huevos", "Aceite para freír"],
+        "pasos": [
+            "Preparar una masa suave con la harina, agua y sal.",
+            "Armar arepas medianas y freírlas en aceite muy caliente hasta que se inflen.",
+            "Retirar la arepa, hacer una pequeña incisión en el borde e introducir un huevo crudo.",
+            "Sellar la abertura con un poco de masa cruda y volver a freír hasta que el huevo esté cocido.",
+            "Escurrir en papel absorbente y servir caliente."
+        ]
     },
     {
         "id": 5,
         "nombre": "Lulada Valluna",
         "descripcion": "Bebida refrescante de Cali con trozos de lulo y limón.",
         "imagen": "assets/img/lulada.jpg",
-        "categoria": "Bebidas"
+        "categoria": "Bebidas",
+        "ingredientes": ["6 lulos maduros", "4 limones", "Media taza de azúcar o panela", "Hielo picado"],
+        "pasos": [
+            "Pelar los lulos y macerar la pulpa con las manos o un tenedor (no licuar).",
+            "Agregar el jugo de los limones y el azúcar.",
+            "Mezclar bien hasta que el azúcar se disuelva.",
+            "Servir en vasos grandes con abundante hielo picado.",
+            "Se puede añadir leche condensada al gusto."
+        ]
     },
     {
         "id": 6,
         "nombre": "Tamal Tolimense",
         "descripcion": "Masa de maíz rellena de carnes y verduras envuelta en hoja de bijao.",
         "imagen": "assets/img/tamal.webp",
-        "categoria": "Plato Fuerte"
+        "categoria": "Plato Fuerte",
+        "ingredientes": ["Harina de maíz pre-cocida", "Pollo, cerdo y tocino", "Arveja amarilla y zanahoria", "Huevo cocido", "Hojas de bijao o plátano"],
+        "pasos": [
+            "Preparar un guiso potente con cebolla, ajo y color.",
+            "Marinar las carnes con parte del guiso desde el día anterior.",
+            "Preparar la masa de maíz mezclándola con caldo y parte del guiso.",
+            "Armar el tamal sobre hojas de bijao poniendo masa, carnes, verduras y huevo.",
+            "Amarrar muy bien y cocinar al vapor durante 3 a 4 horas."
+        ]
     },
     {
         "id": 7,
         "nombre": "Lechona Tolimense",
         "descripcion": "Cerdo relleno de arveja y carne, cocido lentamente al horno.",
         "imagen": "assets/img/lechona.jpg",
-        "categoria": "Plato Fuerte"
+        "categoria": "Plato Fuerte",
+        "ingredientes": ["Cuero de cerdo", "Carne de cerdo picada", "Arveja amarilla cocida", "Cebolla larga y ajo", "Manteca de cerdo"],
+        "pasos": [
+            "Adobe la carne de cerdo con cebolla, ajo y sal.",
+            "Mezcle la carne con la arveja cocida (la lechona auténtica no lleva arroz).",
+            "Limpie el cuero del cerdo y rellénelo con la mezcla de carne y arveja.",
+            "Cosa el cuero para cerrar la lechona.",
+            "Hornee a fuego lento durante 8 a 10 horas hasta que el cuero esté dorado y crocante."
+        ]
     },
     {
         "id": 8,
         "nombre": "Arroz con Coco",
         "descripcion": "Acompañamiento dulce y salado típico de las costas.",
         "imagen": "assets/img/arroz_coco.jpg",
-        "categoria": "Acompañamientos"
+        "categoria": "Acompañamientos",
+        "ingredientes": ["1 coco grande", "2 tazas de arroz", "2 cucharadas de azúcar", "1 cucharadita de sal"],
+        "pasos": [
+            "Extraer la primera leche del coco licuando la pulpa con poca agua.",
+            "Poner esa leche en una olla con el azúcar y cocinar hasta que se convierta en aceite y queden grumos dorados (titoté).",
+            "Agregar la segunda leche de coco (obtenida licuando el bagazo otra vez) y la sal.",
+            "Cuando hierva, añadir el arroz y cocinar normalmente hasta que esté seco.",
+            "Tapar y dejar a fuego muy bajo hasta que el grano esté blando."
+        ]
     }
 ]
 
