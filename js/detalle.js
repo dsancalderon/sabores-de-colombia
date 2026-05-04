@@ -34,7 +34,7 @@ async function cargarDetalle() {
                             <i class="fas fa-print"></i> Imprimir
                         </button>
 
-                        <button id="btnCompartir" class="btn btn-share">
+                        <button id="btnCompartir" class="btn btn-copy-link">
                             <i class="fas fa-share-alt"></i> Compartir
                         </button>
                     </div>
