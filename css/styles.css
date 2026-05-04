@@ -415,3 +415,71 @@ footer {
     width: 100%;
     border-radius: 12px;
 }
+
+/* --- ESTILO DEFINITIVO PARA EL MODAL --- */
+
+/* Usamos el ID para asegurar que estas reglas SIEMPRE se apliquen */
+#modalCompartir {
+    position: fixed !important; /* Se queda fijo sin importar el scroll */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;    /* Ocupa todo el ancho de la ventana */
+    height: 100vh !important;   /* Ocupa todo el alto de la ventana */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    z-index: 10000;             /* Por encima de TODO */
+    
+    /* Centrado perfecto */
+    display: none;              /* Empieza oculto */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Solo esta clase controla si se ve o no */
+#modalCompartir.modal-activo {
+    display: flex !important;
+}
+
+/* La caja blanca (el contenido) */
+.modal-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* Botón de cerrar y otros detalles que ya tenías */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.input-grupo {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#urlReceta {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#btnCopiar {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}

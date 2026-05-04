@@ -42,5 +42,18 @@
     <!-- SCRIPT -->
     <script src="js/detalle.js"></script>
 
+    <div id="modalCompartir" class="modal-oculto">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" id="btnCerrarModal">&times;</span>
+        <h3>Compartir esta receta</h3>
+        <p>Copia el enlace para compartirlo con quien quieras:</p>
+        <div class="input-grupo">
+            <input type="text" id="urlReceta" readonly>
+            <button id="btnCopiar">Copiar</button>
+        </div>
+        <p id="mensajeCopiado" class="mensaje-oculto">¡Enlace copiado!</p>
+        </div>
+    </div>
+
 </body>
 </html>

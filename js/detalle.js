@@ -34,7 +34,7 @@ async function cargarDetalle() {
                             <i class="fas fa-print"></i> Imprimir
                         </button>
 
-                        <button class="btn btn-share">
+                        <button id="btnCompartir" class="btn btn-share">
                             <i class="fas fa-share-alt"></i> Compartir
                         </button>
                     </div>
@@ -49,8 +49,70 @@ async function cargarDetalle() {
     } catch (error) {
         console.error("Error cargando detalle:", error);
     }
+
+    // Usamos el 'document' para escuchar los clics en toda la página
+// Esto asegura que detecte el botón incluso si se creó dinámicamente
+
 }
 
-document.addEventListener('DOMContentLoaded', cargarDetalle);
+document.addEventListener('click', (event) => {
+    
+    // 1. ABRIR MODAL: Verificamos si lo que se clickeó fue el botón de compartir (o su ícono interno)
+    const botonCompartir = event.target.closest('#btnCompartir');
+    
+    if (botonCompartir) {
+        const modalCompartir = document.getElementById('modalCompartir');
+        const urlRecetaInput = document.getElementById('urlReceta');
+        const btnCopiar = document.getElementById('btnCopiar');
+        const mensajeCopiado = document.getElementById('mensajeCopiado');
+
+        if (modalCompartir) {
+            modalCompartir.classList.remove('modal-oculto');
+            modalCompartir.classList.add('modal-activo');
+            
+            // Obtenemos la URL actual
+            urlRecetaInput.value = window.location.href; 
+            
+            // Reiniciamos textos
+            btnCopiar.textContent = 'Copiar';
+            mensajeCopiado.style.display = 'none';
+        }
+    }
+
+    // 2. CERRAR MODAL (con la X)
+    const btnCerrarModal = event.target.closest('#btnCerrarModal');
+    if (btnCerrarModal) {
+        const modalCompartir = document.getElementById('modalCompartir');
+        modalCompartir.classList.remove('modal-activo');
+        modalCompartir.classList.add('modal-oculto');
+    }
+
+    // 3. CERRAR MODAL (clic afuera)
+    const modalCompartir = document.getElementById('modalCompartir');
+    if (event.target === modalCompartir) {
+        modalCompartir.classList.remove('modal-activo');
+        modalCompartir.classList.add('modal-oculto');
+    }
+
+    // 4. COPIAR AL PORTAPAPELES
+    const btnCopiar = event.target.closest('#btnCopiar');
+    if (btnCopiar) {
+        const urlRecetaInput = document.getElementById('urlReceta');
+        const mensajeCopiado = document.getElementById('mensajeCopiado');
+        
+        navigator.clipboard.writeText(urlRecetaInput.value)
+            .then(() => {
+                mensajeCopiado.style.display = 'block';
+                btnCopiar.textContent = '¡Listo!';
+                
+                setTimeout(() => {
+                    mensajeCopiado.style.display = 'none';
+                    btnCopiar.textContent = 'Copiar';
+                }, 2500);
+            })
+            .catch(err => console.error('Error al copiar: ', err));
+    }
+});
+
 // Ejecutar cuando cargue la página
 document.addEventListener('DOMContentLoaded', cargarDetalle);
